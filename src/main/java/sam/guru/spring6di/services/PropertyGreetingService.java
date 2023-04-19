@@ -1,12 +1,11 @@
 package sam.guru.spring6di.services;
 
-
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class PropertyGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello everyone!";
+        return "Hello World - Property";
     }
 }

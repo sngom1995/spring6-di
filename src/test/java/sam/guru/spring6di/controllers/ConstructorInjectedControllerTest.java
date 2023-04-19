@@ -8,27 +8,19 @@ import sam.guru.spring6di.services.GreetingServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 @SpringBootTest
-class SetterInjectedControllerTest {
-
+class ConstructorInjectedControllerTest {
 
     @Autowired
-    SetterInjectedController controller;
-    /*@BeforeEach
+    private ConstructorInjectedController controller;
+   /* @BeforeEach
     void setUp() {
-        controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new GreetingServiceImpl());
     }*/
 
     @Test
-    void setGreetingService() {
-        System.out.println("SetterInjectedControllerTest.setGreetingService");
-        System.out.println(controller.sayHello());
-    }
-
-    @Test
     void sayHello() {
+        System.out.println("ConstructorInjectedControllerTest.sayHello");
         System.out.println(controller.sayHello());
     }
 }
